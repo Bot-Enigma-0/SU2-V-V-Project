@@ -1,0 +1,233 @@
+
+-------------------------------------------------------------------------
+|    ___ _   _ ___                                                      |
+|   / __| | | |_  )   Release 8.0.1 "Harrier"                           |
+|   \__ \ |_| |/ /                                                      |
+|   |___/\___//___|   Suite (Computational Fluid Dynamics Code)         |
+|                                                                       |
+-------------------------------------------------------------------------
+| SU2 Project Website: https://su2code.github.io                        |
+|                                                                       |
+| The SU2 Project is maintained by the SU2 Foundation                   |
+| (http://su2foundation.org)                                            |
+-------------------------------------------------------------------------
+| Copyright 2012-2024, SU2 Contributors                                 |
+|                                                                       |
+| SU2 is free software; you can redistribute it and/or                  |
+| modify it under the terms of the GNU Lesser General Public            |
+| License as published by the Free Software Foundation; either          |
+| version 2.1 of the License, or (at your option) any later version.    |
+|                                                                       |
+| SU2 is distributed in the hope that it will be useful,                |
+| but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+| Lesser General Public License for more details.                       |
+|                                                                       |
+| You should have received a copy of the GNU Lesser General Public      |
+| License along with SU2. If not, see <http://www.gnu.org/licenses/>.   |
+-------------------------------------------------------------------------
+
+
+Problem definition:
+
+Compressible RANS equations.
+Turbulence model: Spalart Allmaras
+Mach number: 0.2.
+Angle of attack (AoA): 11 deg, and angle of sideslip (AoS): 0 deg.
+Reynolds number: 5.6e+06.
+Dimensional simulation.
+The reference area is 191.845 m^2.
+The reference length is 7.00532 m.
+
+
+Problem definition:
+
+Viscous flow: Computing pressure using the ideal gas law
+based on the free-stream temperature and a density computed
+from the Reynolds number.
+Force coefficients computed using free-stream values.
+-- Input conditions:
+Fluid Model: STANDARD_AIR 
+Specific gas constant: 287.058 N.m/kg.K.
+Specific gas constant (non-dim): 287.058
+Specific Heat Ratio: 1.4000 
+Viscosity Model: SUTHERLAND 
+Ref. Laminar Viscosity: 1.716e-05 N.s/m^2.
+Ref. Temperature: 273.15 K.
+Sutherland Constant: 110.4 K.
+Laminar Viscosity (non-dim): 1.716e-05
+Ref. Temperature (non-dim): 273.15
+Sutherland constant (non-dim): 110.4
+Conductivity Model: CONSTANT_PRANDTL 
+Prandtl: 0.72
+Turbulent Conductivity Model: CONSTANT_PRANDTL 
+Turbulent Prandtl: 0.9
+Free-stream static pressure: 17483.4 Pa.
+Free-stream total pressure: 17977.9 Pa.
+Free-stream temperature: 289.444 K.
+Free-stream total temperature: 291.76 K.
+Free-stream density: 0.210423 kg/m^3.
+Free-stream velocity: (66.9588, 0, 13.0155) m/s. Magnitude: 68.2121 m/s.
+Free-stream total energy per unit mass: 210044 m^2/s^2.
+Free-stream viscosity: 1.79553e-05 N.s/m^2.
+Free-stream turb. kinetic energy per unit mass: 17.4483 m^2/s^2.
+Free-stream specific dissipation: 20448.1 1/s.
+-- Reference values:
+Reference specific gas constant: 1 N.m/kg.K.
+Reference pressure: 1 Pa.
+Reference temperature: 1 K.
+Reference density: 1 kg/m^3.
+Reference velocity: 1 m/s.
+Reference energy per unit mass: 1 m^2/s^2.
+Reference viscosity: 1 N.s/m^2.
+Reference conductivity: 1 W/m^2.K.
+-- Resulting non-dimensional state:
+Mach number (non-dim): 0.2
+Reynolds number (non-dim): 5.6e+06. Re length: 7.00532 m.
+Specific gas constant (non-dim): 287.058
+Free-stream temperature (non-dim): 289.444
+Free-stream pressure (non-dim): 17483.4
+Free-stream density (non-dim): 0.210423
+Free-stream velocity (non-dim): (66.9588, 0, 13.0155). Magnitude: 68.2121
+Free-stream total energy per unit mass (non-dim): 210044
+Free-stream viscosity (non-dim): 1.79553e-05
+Free-stream turb. kinetic energy (non-dim): 17.4483
+Free-stream specific dissipation (non-dim): 20448.1
+
+
+Forces breakdown:
+
+Center of Pressure: X=-0.056654Z+33.052707 m.
+
+NOTE: Multiply forces by the non-dimensional factor: 93914.977438, and the reference factor: 1.000000
+to obtain the dimensional force.
+
+Total CL:       0.870200 | Pressure (  100%):    0.871621 | Friction (    0%):   -0.001421 | Momentum (    0%):    0.000000
+Total CD:       0.118544 | Pressure (   90%):    0.107175 | Friction (    9%):    0.011369 | Momentum (    0%):    0.000000
+Total CSF:      0.172653 | Pressure (   96%):    0.166977 | Friction (    3%):    0.005676 | Momentum (    0%):    0.000000
+Total CL/CD:    7.340745 | Pressure (  110%):    8.132669 | Friction (   -1%):   -0.125031 | Momentum (    0%):    0.000000
+Total CMx:      1.226061 | Pressure (  100%):    1.226921 | Friction (    0%):   -0.000860 | Momentum (    0%):    0.000000
+Total CMy:      0.110296 | Pressure (   96%):    0.106231 | Friction (    3%):    0.004064 | Momentum (    0%):    0.000000
+Total CMz:     -0.179677 | Pressure (   93%):   -0.167862 | Friction (    6%):   -0.011815 | Momentum (    0%):    0.000000
+Total CFx:     -0.049676 | Pressure (  123%):   -0.061107 | Friction (  -23%):    0.011431 | Momentum (    0%):    0.000000
+Total CFy:      0.172653 | Pressure (   96%):    0.166977 | Friction (    3%):    0.005676 | Momentum (    0%):    0.000000
+Total CFz:      0.876831 | Pressure (   99%):    0.876057 | Friction (    0%):    0.000774 | Momentum (    0%):    0.000000
+
+
+Surface name: TRI_bdy1
+
+Total CL    (   16%):    0.139500 | Pressure (  100%):    0.140310 | Friction (    0%):   -0.000810 | Momentum (    0%):    0.000000
+Total CD    (   27%):    0.032544 | Pressure (   76%):    0.024871 | Friction (   23%):    0.007673 | Momentum (    0%):    0.000000
+Total CSF   (  111%):    0.192545 | Pressure (   98%):    0.189123 | Friction (    1%):    0.003422 | Momentum (    0%):    0.000000
+Total CL/CD (   58%):    4.286510 | Pressure (  131%):    5.641407 | Friction (   -2%):   -0.105536 | Momentum (    0%):    0.000000
+Total CMx   (   -2%):   -0.025816 | Pressure (   99%):   -0.025614 | Friction (    0%):   -0.000201 | Momentum (    0%):    0.000000
+Total CMy   (  175%):    0.193513 | Pressure (   98%):    0.190357 | Friction (    1%):    0.003156 | Momentum (    0%):    0.000000
+Total CMz   (  140%):   -0.252023 | Pressure (   97%):   -0.246155 | Friction (    2%):   -0.005868 | Momentum (    0%):    0.000000
+Total CFx   (  -10%):    0.005328 | Pressure (  -44%):   -0.002358 | Friction (  144%):    0.007686 | Momentum (    0%):    0.000000
+Total CFy   (  111%):    0.192545 | Pressure (   98%):    0.189123 | Friction (    1%):    0.003422 | Momentum (    0%):    0.000000
+Total CFz   (   16%):    0.143146 | Pressure (   99%):    0.142477 | Friction (    0%):    0.000669 | Momentum (    0%):    0.000000
+
+Surface name: TRI_bdy2
+
+Total CL    (    0%):    0.000002 | Pressure (   99%):    0.000002 | Friction (    0%):    0.000000 | Momentum (    0%):    0.000000
+Total CD    (    0%):   -0.000012 | Pressure (  100%):   -0.000012 | Friction (    0%):    0.000000 | Momentum (    0%):    0.000000
+Total CSF   (    0%):    0.000000 | Pressure (    0%):   -0.000000 | Friction (  100%):    0.000000 | Momentum (    0%):    0.000000
+Total CL/CD (   -2%):   -0.194520 | Pressure (   99%):   -0.194380 | Friction ( -962%):    1.872964 | Momentum (    0%):    0.000000
+Total CMx   (    0%):   -0.000000 | Pressure (    0%):    0.000000 | Friction (  100%):   -0.000000 | Momentum (    0%):    0.000000
+Total CMy   (    0%):   -0.000004 | Pressure (   99%):   -0.000004 | Friction (    0%):   -0.000000 | Momentum (    0%):    0.000000
+Total CMz   (    0%):    0.000000 | Pressure (   12%):    0.000000 | Friction (   87%):    0.000000 | Momentum (    0%):    0.000000
+Total CFx   (    0%):   -0.000013 | Pressure (  100%):   -0.000013 | Friction (    0%):    0.000000 | Momentum (    0%):    0.000000
+Total CFy   (    0%):    0.000000 | Pressure (    0%):   -0.000000 | Friction (  100%):    0.000000 | Momentum (    0%):    0.000000
+Total CFz   (    0%):    0.000000 | Pressure (    0%):   -0.000000 | Friction (  100%):    0.000000 | Momentum (    0%):    0.000000
+
+Surface name: TRI_bdy4
+
+Total CL    (    0%):   -0.000542 | Pressure (  101%):   -0.000553 | Friction (   -1%):    0.000011 | Momentum (    0%):    0.000000
+Total CD    (    0%):    0.000380 | Pressure (   98%):    0.000373 | Friction (    1%):    0.000007 | Momentum (    0%):    0.000000
+Total CSF   (    0%):   -0.000300 | Pressure (  102%):   -0.000307 | Friction (   -2%):    0.000006 | Momentum (    0%):    0.000000
+Total CL/CD (  -19%):   -1.427925 | Pressure (  103%):   -1.483041 | Friction ( -107%):    1.532400 | Momentum (    0%):    0.000000
+Total CMx   (    0%):    0.000051 | Pressure (  101%):    0.000052 | Friction (   -1%):   -0.000001 | Momentum (    0%):    0.000000
+Total CMy   (   -1%):   -0.001834 | Pressure (  102%):   -0.001885 | Friction (   -2%):    0.000051 | Momentum (    0%):    0.000000
+Total CMz   (    0%):    0.001250 | Pressure (  102%):    0.001278 | Friction (   -2%):   -0.000028 | Momentum (    0%):    0.000000
+Total CFx   (    0%):    0.000476 | Pressure (   98%):    0.000472 | Friction (    1%):    0.000005 | Momentum (    0%):    0.000000
+Total CFy   (    0%):   -0.000300 | Pressure (  102%):   -0.000307 | Friction (   -2%):    0.000006 | Momentum (    0%):    0.000000
+Total CFz   (    0%):   -0.000460 | Pressure (  102%):   -0.000472 | Friction (   -2%):    0.000012 | Momentum (    0%):    0.000000
+
+Surface name: TRI_bdy5
+
+Total CL    (    0%):   -0.000027 | Pressure (  101%):   -0.000027 | Friction (   -1%):    0.000000 | Momentum (    0%):    0.000000
+Total CD    (    0%):    0.000019 | Pressure (   99%):    0.000018 | Friction (    0%):    0.000000 | Momentum (    0%):    0.000000
+Total CSF   (    0%):   -0.000007 | Pressure (  100%):   -0.000007 | Friction (    0%):    0.000000 | Momentum (    0%):    0.000000
+Total CL/CD (  -19%):   -1.448801 | Pressure (  102%):   -1.482619 | Friction ( -134%):    1.941565 | Momentum (    0%):    0.000000
+Total CMx   (    0%):    0.000002 | Pressure (  100%):    0.000002 | Friction (    0%):   -0.000000 | Momentum (    0%):    0.000000
+Total CMy   (    0%):   -0.000092 | Pressure (  101%):   -0.000093 | Friction (   -1%):    0.000002 | Momentum (    0%):    0.000000
+Total CMz   (    0%):    0.000030 | Pressure (  100%):    0.000031 | Friction (    0%):   -0.000000 | Momentum (    0%):    0.000000
+Total CFx   (    0%):    0.000023 | Pressure (   99%):    0.000023 | Friction (    0%):    0.000000 | Momentum (    0%):    0.000000
+Total CFy   (    0%):   -0.000007 | Pressure (  100%):   -0.000007 | Friction (    0%):    0.000000 | Momentum (    0%):    0.000000
+Total CFz   (    0%):   -0.000023 | Pressure (  101%):   -0.000023 | Friction (   -1%):    0.000000 | Momentum (    0%):    0.000000
+
+Surface name: TRI_bdy6
+
+Total CL    (   14%):    0.126282 | Pressure (  101%):    0.128407 | Friction (   -1%):   -0.002125 | Momentum (    0%):    0.000000
+Total CD    (   27%):    0.032514 | Pressure (   92%):    0.029988 | Friction (    7%):    0.002526 | Momentum (    0%):    0.000000
+Total CSF   (  -12%):   -0.022018 | Pressure (  103%):   -0.022875 | Friction (   -3%):    0.000857 | Momentum (    0%):    0.000000
+Total CL/CD (   52%):    3.883868 | Pressure (  110%):    4.281913 | Friction (  -21%):   -0.841366 | Momentum (    0%):    0.000000
+Total CMx   (   18%):    0.222559 | Pressure (  101%):    0.225784 | Friction (   -1%):   -0.003226 | Momentum (    0%):    0.000000
+Total CMy   (  -14%):   -0.016508 | Pressure (  106%):   -0.017507 | Friction (   -6%):    0.000999 | Momentum (    0%):    0.000000
+Total CMz   (    6%):   -0.011594 | Pressure (   50%):   -0.005809 | Friction (   49%):   -0.005785 | Momentum (    0%):    0.000000
+Total CFx   (  -15%):    0.007821 | Pressure (   63%):    0.004936 | Friction (   36%):    0.002885 | Momentum (    0%):    0.000000
+Total CFy   (  -12%):   -0.022018 | Pressure (  103%):   -0.022875 | Friction (   -3%):    0.000857 | Momentum (    0%):    0.000000
+Total CFz   (   14%):    0.130166 | Pressure (  101%):    0.131770 | Friction (   -1%):   -0.001604 | Momentum (    0%):    0.000000
+
+Surface name: TRI_bdy7
+
+Total CL    (    0%):   -0.000017 | Pressure (   97%):   -0.000017 | Friction (    2%):   -0.000000 | Momentum (    0%):    0.000000
+Total CD    (    0%):    0.000081 | Pressure (   99%):    0.000080 | Friction (    0%):    0.000001 | Momentum (    0%):    0.000000
+Total CSF   (    0%):   -0.000014 | Pressure (   99%):   -0.000014 | Friction (    0%):   -0.000000 | Momentum (    0%):    0.000000
+Total CL/CD (   -2%):   -0.213979 | Pressure (   98%):   -0.210314 | Friction (  323%):   -0.692145 | Momentum (    0%):    0.000000
+Total CMx   (    0%):   -0.000002 | Pressure (   79%):   -0.000001 | Friction (   20%):   -0.000000 | Momentum (    0%):    0.000000
+Total CMy   (    0%):    0.000002 | Pressure (   89%):    0.000001 | Friction (   10%):    0.000000 | Momentum (    0%):    0.000000
+Total CMz   (    0%):   -0.000101 | Pressure (   99%):   -0.000101 | Friction (    0%):   -0.000001 | Momentum (    0%):    0.000000
+Total CFx   (    0%):    0.000083 | Pressure (   99%):    0.000082 | Friction (    0%):    0.000001 | Momentum (    0%):    0.000000
+Total CFy   (    0%):   -0.000014 | Pressure (   99%):   -0.000014 | Friction (    0%):   -0.000000 | Momentum (    0%):    0.000000
+Total CFz   (    0%):   -0.000002 | Pressure (   80%):   -0.000001 | Friction (   19%):   -0.000000 | Momentum (    0%):    0.000000
+
+Surface name: TRI_bdy8
+
+Total CL    (    0%):   -0.000103 | Pressure (   98%):   -0.000102 | Friction (    1%):   -0.000002 | Momentum (    0%):    0.000000
+Total CD    (    0%):    0.000422 | Pressure (   99%):    0.000421 | Friction (    0%):    0.000002 | Momentum (    0%):    0.000000
+Total CSF   (    0%):   -0.000222 | Pressure (   99%):   -0.000222 | Friction (    0%):   -0.000001 | Momentum (    0%):    0.000000
+Total CL/CD (   -3%):   -0.244759 | Pressure (   98%):   -0.241343 | Friction (  427%):   -1.045408 | Momentum (    0%):    0.000000
+Total CMx   (    0%):   -0.000011 | Pressure (   64%):   -0.000007 | Friction (   35%):   -0.000004 | Momentum (    0%):    0.000000
+Total CMy   (    0%):    0.000123 | Pressure (   97%):    0.000120 | Friction (    2%):    0.000002 | Momentum (    0%):    0.000000
+Total CMz   (    0%):   -0.001545 | Pressure (   99%):   -0.001538 | Friction (    0%):   -0.000007 | Momentum (    0%):    0.000000
+Total CFx   (    0%):    0.000434 | Pressure (   99%):    0.000432 | Friction (    0%):    0.000002 | Momentum (    0%):    0.000000
+Total CFy   (    0%):   -0.000222 | Pressure (   99%):   -0.000222 | Friction (    0%):   -0.000001 | Momentum (    0%):    0.000000
+Total CFz   (    0%):   -0.000021 | Pressure (   92%):   -0.000019 | Friction (    7%):   -0.000001 | Momentum (    0%):    0.000000
+
+Surface name: TRI_bdy9
+
+Total CL    (    0%):   -0.000026 | Pressure (  100%):   -0.000026 | Friction (    0%):    0.000000 | Momentum (    0%):    0.000000
+Total CD    (    0%):    0.000004 | Pressure ( -142%):   -0.000006 | Friction (  242%):    0.000011 | Momentum (    0%):    0.000000
+Total CSF   (    0%):    0.000839 | Pressure (   99%):    0.000832 | Friction (    0%):    0.000008 | Momentum (    0%):    0.000000
+Total CL/CD (  -77%):   -5.724425 | Pressure (  -70%):    4.033496 | Friction (    0%):    0.002436 | Momentum (    0%):    0.000000
+Total CMx   (    0%):   -0.000368 | Pressure (  101%):   -0.000375 | Friction (   -1%):    0.000006 | Momentum (    0%):    0.000000
+Total CMy   (    0%):    0.000046 | Pressure (  100%):    0.000046 | Friction (    0%):   -0.000000 | Momentum (    0%):    0.000000
+Total CMz   (    0%):    0.001481 | Pressure (  102%):    0.001512 | Friction (   -2%):   -0.000031 | Momentum (    0%):    0.000000
+Total CFx   (    0%):    0.000009 | Pressure (  -14%):   -0.000001 | Friction (  114%):    0.000011 | Momentum (    0%):    0.000000
+Total CFy   (    0%):    0.000839 | Pressure (   99%):    0.000832 | Friction (    0%):    0.000008 | Momentum (    0%):    0.000000
+Total CFz   (    0%):   -0.000024 | Pressure (  108%):   -0.000026 | Friction (   -8%):    0.000002 | Momentum (    0%):    0.000000
+
+Surface name: TRI_bdy10
+
+Total CL    (   69%):    0.605131 | Pressure (   99%):    0.603626 | Friction (    0%):    0.001505 | Momentum (    0%):    0.000000
+Total CD    (   44%):    0.052591 | Pressure (   97%):    0.051442 | Friction (    2%):    0.001149 | Momentum (    0%):    0.000000
+Total CSF   (    1%):    0.001830 | Pressure (   24%):    0.000447 | Friction (   75%):    0.001383 | Momentum (    0%):    0.000000
+Total CL/CD (  156%):   11.506278 | Pressure (  101%):   11.734115 | Friction (   11%):    1.309389 | Momentum (    0%):    0.000000
+Total CMx   (   83%):    1.029646 | Pressure (   99%):    1.027080 | Friction (    0%):    0.002566 | Momentum (    0%):    0.000000
+Total CMy   (  -58%):   -0.064950 | Pressure (   99%):   -0.064804 | Friction (    0%):   -0.000146 | Momentum (    0%):    0.000000
+Total CMz   (  -46%):    0.082825 | Pressure (  100%):    0.082921 | Friction (    0%):   -0.000096 | Momentum (    0%):    0.000000
+Total CFx   (  128%):   -0.063839 | Pressure (  101%):   -0.064680 | Friction (   -1%):    0.000841 | Momentum (    0%):    0.000000
+Total CFy   (    1%):    0.001830 | Pressure (   24%):    0.000447 | Friction (   75%):    0.001383 | Momentum (    0%):    0.000000
+Total CFz   (   68%):    0.604048 | Pressure (   99%):    0.602352 | Friction (    0%):    0.001697 | Momentum (    0%):    0.000000
+
